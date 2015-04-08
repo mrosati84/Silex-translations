@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ 'Gestione delle traduzioni con Silex'|trans }}</title>
+</head>
+<body>
+    <!-- Testing the translation filter -->
+    <h1>{{ 'ciao'|trans }}, {{ name }}</h1>
+
+    <div>{{ 'lingua corrente'|trans }}: {{ app.request.locale }}</div>
+
+    <div>
+        <!-- testing url generation -->
+        <a href="{{ url('hello', {'name': name, '_locale': 'en'}) }}">EN</a> -
+        <a href="{{ url('hello', {'name': name, '_locale': 'it'}) }}">IT</a>
+    </div>
+</body>
+</html>
